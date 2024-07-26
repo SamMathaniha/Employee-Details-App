@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -7,6 +8,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/employees', function () {
-    return view('create');
-});
+/* Route::get('/employees', function () {
+    return view('index');
+}) */;
+
+Route::get('/employee',[EmployeeController::class,'index']);
+
