@@ -11,7 +11,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+        return view ('index');
     }
 
     /**
@@ -19,7 +19,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
+        return view ('create');
     }
 
     /**
@@ -27,7 +27,7 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view ('store');
     }
 
     /**
@@ -35,7 +35,7 @@ class EmployeeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view ('show');
     }
 
     /**
@@ -43,7 +43,7 @@ class EmployeeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view ('edit');
     }
 
     /**

@@ -3,42 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Management</title>
+    <title>Create New Employee</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="container mt-5">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2>Employee Management</h2>
-        <button class="btn btn-primary" onclick="window.location.href='create-employee.html'">Create Employee</button>
-    </div>
-
-    <table class="table table-bordered">
-        <thead class="thead-light">
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Joining Date</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>John Doe</td>
-                <td>john.doe@example.com</td>
-                <td>2023-07-26</td>
-                <td>Active</td>
-                <td>
-                    <button class="btn btn-info btn-sm">Show</button>
-                    <button class="btn btn-warning btn-sm">Edit</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                </td>
-            </tr>
-            <!-- Additional rows can be added here -->
-        </tbody>
-    </table>
+    <h2>Create New Employee</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+            <label for="joiningDate">Joining Date</label>
+            <input type="date" class="form-control" id="joiningDate" required>
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary</label>
+            <input type="number" class="form-control" id="salary" placeholder="Enter salary" required>
+        </div>
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="active">
+            <label class="form-check-label" for="active">Active</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Employee</button>
+    </form>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
