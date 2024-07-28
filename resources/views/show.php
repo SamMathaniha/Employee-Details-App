@@ -1,4 +1,5 @@
-
+@extends('layouts.app')
+@section('content')
 <div class="container mt-5">
     <h2>Show Employee</h2>
     <div class="card">
@@ -12,4 +13,4 @@
     <button class="btn btn-secondary mt-3" onclick="window.location.href='index.php'">Back</button>
 </div>
 
- 
+@endsection

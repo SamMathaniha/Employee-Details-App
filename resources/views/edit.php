@@ -1,4 +1,5 @@
-
+@extends('layouts.app')
+@section('content')
 <div class="container mt-5">
     <h2>Edit Employee</h2>
     <form action="update.php" method="POST">
@@ -25,3 +26,4 @@
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
+@endsection
