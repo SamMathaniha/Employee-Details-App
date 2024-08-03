@@ -6,19 +6,19 @@
         @csrf
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="Name" class="form-control" id="name" placeholder="Enter name" required>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Enter name" required>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" name="Email" class="form-control" id="email" placeholder="Enter email" required>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
         </div>
         <div class="form-group">
             <label for="joiningDate">Joining Date</label>
-            <input type="date" name="joiningDate"name="Email" class="form-control" id="joiningDate" required>
+            <input type="date" name="joining_Date"name="Email" class="form-control" id="joiningDate" required>
         </div>
         <div class="form-group">
             <label for="salary">Salary</label>
-            <input type="number" name="Salary" class="form-control" id="salary" placeholder="Enter salary" required>
+            <input type="number" name="salary" class="form-control" id="salary" placeholder="Enter salary" required>
         </div>
         <div class="form-check mb-3">
             <input type="checkbox" class="form-check-input" id="active">
