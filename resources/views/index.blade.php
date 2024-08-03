@@ -3,7 +3,7 @@
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Employee Management</h2>
-        <button class="btn btn-primary" onclick="window.location.href='create-employee.html'">Create Employee</button>
+        <a href="{{route('employees.create')}}"><button class="btn btn-primary">Create Employee</button></a>
     </div>
 
     <table class="table table-bordered">

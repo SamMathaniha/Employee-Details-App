@@ -13,7 +13,7 @@ Route::get('/', function () {
 }) */;
 
 Route::get('/employee',[EmployeeController::class,'index']);
-Route::get('/employee/create',[EmployeeController::class,'create']);
+Route::get('/employee/create',[EmployeeController::class,'create'])->name('employees.create');
 Route::get('/employee/edit',[EmployeeController::class,'edit']);
 Route::get('/employee/show',[EmployeeController::class,'show']);
 
