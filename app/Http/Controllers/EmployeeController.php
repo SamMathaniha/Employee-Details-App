@@ -29,18 +29,25 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
+        
+        //mass assignment
        $data = $request->except('_token');
-       // Employee::create($data);
+       Employee::create($data);
+
+      
 
        //Insert single row 
-       $employee = new Employee;
+    /*    $employee = new Employee;
        $employee->name = $data['name'];
        $employee->email = $data['email'];
        $employee->joining_date = $data['joining_date'];
        $employee->salary = $data['salary'];
        $data['is_active'] = $request->has('is_active') ? 1 : 0;
-       $employee->save();
-        dd('Sucessfully created');
+       $employee->save(); */
+       
+       return redirect()
+       ->route('employees.index')
+       ->withMessage('Employee has been created Successfully !');
       
     }
 
