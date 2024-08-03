@@ -2,7 +2,7 @@
 @section('content')
 <div class="container mt-5">
     <h2>Create New Employee</h2>
-    <form action="" method="POST" novalidate>
+    <form action="{{route('employees.store')}}" method="POST" novalidate>
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="Name" class="form-control" id="name" placeholder="Enter name" required>
