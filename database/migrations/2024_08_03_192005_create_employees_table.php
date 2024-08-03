@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->date('joining_date');
             $table->decimal('salary', 10, 2);
-            $table->boolean('is_active')->default(false);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

@@ -60,8 +60,9 @@ class EmployeeController extends Controller
        $employee->save(); */
        
        return redirect()
-       ->route('employees.index')
-       ->withMessage('Employee has been created Successfully !');
+    ->route('employees.index')
+    ->with('message', 'Employee has been created successfully!');
+
       
     }
 
