@@ -18,5 +18,5 @@ class Employee extends Model
     ]; */
 
     // not for mass assignment
-    protected $guarded = ['is_active'];
+    protected $guarded = [];
 }

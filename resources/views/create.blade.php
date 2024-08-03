@@ -1,5 +1,14 @@
 @extends('layouts.app')
 @section('content')
+
+@if($errors->any()) <!-- used any for only excute when were there is any errors -->
+    @foreach ( $errors->all() as $error)  <!-- All method take all the error and get is in $error -->
+        <div class="alert alert-danger">
+            {{$error}}
+        </div>
+    @endforeach
+@endif
+
 <div class="container mt-5">
     <h2>Create New Employee</h2>
     <form action="{{route('employees.store')}}" method="POST" novalidate>
@@ -21,9 +30,10 @@
             <input type="number" name="salary" class="form-control" id="salary" placeholder="Enter salary" required>
         </div>
         <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="active" name="is_active">
-            <label class="form-check-label" for="active">Active</label>
-        </div>
+    <input type="checkbox" class="form-check-input" id="active" name="is_active">
+    <label class="form-check-label" for="active">Active</label>
+</div>
+
         <button type="submit" class="btn btn-primary">Create Employee</button>
     </form>
 </div>

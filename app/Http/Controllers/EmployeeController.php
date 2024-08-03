@@ -29,10 +29,24 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        
+         // Validate the incoming request data
+         $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|unique:employees,email|email|max:255',
+            'joining_date' => 'required|date',
+            'salary' => 'required|numeric',
+            'is_active' => 'sometimes|boolean',
+        ]);
+
+
         //mass assignment
        $data = $request->except('_token');
-       Employee::create($data);
+
+       // Convert 'is_active' field to a boolean value (1 or 0)
+       $data['is_active'] = $request->has('is_active') ? 1 : 0;
+
+    // Create a new Employee record with the processed data
+        Employee::create($data);
 
       
 
