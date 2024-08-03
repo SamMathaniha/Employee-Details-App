@@ -10,7 +10,7 @@
         <!-- Name Field -->
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Enter name" required>
+            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Enter name" value="{{old('name')}}" required>
             @error('name')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -21,7 +21,7 @@
         <!-- Email Field -->
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Enter email" required>
+            <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Enter email" value="{{old('email')}}"  required>
             @error('email')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -32,7 +32,7 @@
         <!-- Joining Date Field -->
         <div class="form-group">
             <label for="joining_date">Joining Date</label>
-            <input type="date" name="joining_date" class="form-control @error('joining_date') is-invalid @enderror" id="joining_date" required>
+            <input type="date" name="joining_date" class="form-control @error('joining_date') is-invalid @enderror" id="joining_date" value="{{old('joining_date')}}" required>
             @error('joining_date')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -43,7 +43,7 @@
         <!-- Salary Field -->
         <div class="form-group">
             <label for="salary">Salary</label>
-            <input type="number" name="salary" class="form-control @error('salary') is-invalid @enderror" id="salary" placeholder="Enter salary" required>
+            <input type="number" name="salary" class="form-control @error('salary') is-invalid @enderror" id="salary" placeholder="Enter salary"  value="{{old('salary')}}" required>
             @error('salary')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -53,7 +53,7 @@
 
         <!-- Is Active Field -->
         <div class="form-check mb-3">
-        <input type="checkbox" class="form-check-input" id="active" name="is_active">
+        <input type="checkbox" class="form-check-input" id="active" name="is_active" value="{{old('is_active')}}">
         <label class="form-check-label" for="active">Active</label>
             @error('is_active')
                 <span class="invalid-feedback" role="alert">
