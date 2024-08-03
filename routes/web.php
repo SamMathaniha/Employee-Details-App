@@ -15,5 +15,5 @@ Route::get('/', function () {
 Route::get('/employee',[EmployeeController::class,'index']);
 Route::get('/employee/create',[EmployeeController::class,'create'])->name('employees.create');
 Route::post('/employee/store',[EmployeeController::class,'store'])->name('employees.store');
-Route::get('/employee/show',[EmployeeController::class,'show']);
-
+/* Route::get('/employee/show',[EmployeeController::class,'show']);
+ */
