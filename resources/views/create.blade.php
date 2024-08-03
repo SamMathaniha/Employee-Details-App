@@ -13,15 +13,15 @@
             <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
         </div>
         <div class="form-group">
-            <label for="joiningDate">Joining Date</label>
-            <input type="date" name="joining_Date"name="Email" class="form-control" id="joiningDate" required>
+            <label for="joining_date">Joining Date</label>
+            <input type="date" name="joining_date" class="form-control" id="joining_date" required>
         </div>
         <div class="form-group">
             <label for="salary">Salary</label>
             <input type="number" name="salary" class="form-control" id="salary" placeholder="Enter salary" required>
         </div>
         <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="active">
+            <input type="checkbox" class="form-check-input" id="active" name="is_active">
             <label class="form-check-label" for="active">Active</label>
         </div>
         <button type="submit" class="btn btn-primary">Create Employee</button>
