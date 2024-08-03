@@ -13,4 +13,5 @@ Route::get('/', function () {
 }) */;
 
 Route::get('/employee',[EmployeeController::class,'index']);
+Route::get('/employee/create',[EmployeeController::class,'create']);
 
