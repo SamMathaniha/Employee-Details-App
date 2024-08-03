@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Employee;
+
 use Illuminate\Http\Request;
+
 
 class EmployeeController extends Controller
 {
@@ -29,7 +30,8 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
        $data = $request->except('_token');
-       Employee::create($data)
+       Employee::create($data);
+       dd('sucessfully created');
     }
 
     /**
