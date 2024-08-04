@@ -35,9 +35,9 @@
                 <td>{{$employee->joining_date}}</td>
                 <td>{{$employee->is_active == 1? 'Active':''}}</td>
                 <td>
-                    <a><button class="btn btn-info btn-sm">Show</button></a>
-                    <a><button class="btn btn-warning btn-sm">Edit</button></a>
-                    <a><button class="btn btn-danger btn-sm">Delete</button></a>
+                    <a href="{{route('employees.show', $employee->id)}}"><button class="btn btn-info btn-sm">Show</button></a>
+                    <a href="{{route('employees.edit', $employee->id)}}"><button class="btn btn-warning btn-sm">Edit</button></a>
+                    <a ><button class="btn btn-danger btn-sm">Delete</button></a>
                 </td>
             </tr>
             @endforeach
