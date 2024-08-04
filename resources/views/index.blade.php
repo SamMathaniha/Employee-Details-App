@@ -16,6 +16,7 @@
     <table class="table table-bordered">
         <thead class="thead-light">
             <tr>
+                <th>#</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Joining Date</th>
@@ -24,17 +25,22 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($Employees as $key => $employee)
+            
+            
             <tr>
-                <td>John Doe</td>
-                <td>john.doe@example.com</td>
-                <td>2023-07-26</td>
-                <td>Active</td>
+                <td>{{$key + 1}}</td>
+                <td>{{$employee->name}}</td>
+                <td>{{$employee->email}}</td>
+                <td>{{$employee->joining_date}}</td>
+                <td>{{$employee->is_active == 1? 'Active':''}}</td>
                 <td>
-                    <button class="btn btn-info btn-sm">Show</button>
-                    <button class="btn btn-warning btn-sm">Edit</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
+                    <a><button class="btn btn-info btn-sm">Show</button></a>
+                    <a><button class="btn btn-warning btn-sm">Edit</button></a>
+                    <a><button class="btn btn-danger btn-sm">Delete</button></a>
                 </td>
             </tr>
+            @endforeach
             <!-- Additional rows can be added here -->
         </tbody>
     </table>
