@@ -13,7 +13,8 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        return view ('index');
+        $Employees = Employee::all();
+        return view ('index', compact('Employees'));
     }
 
     /**
