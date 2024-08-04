@@ -33,7 +33,7 @@
                 <td>{{$employee->name}}</td>
                 <td>{{$employee->email}}</td>
                 <td>{{$employee->joining_date}}</td>
-                <td>{{$employee->is_active == 1? 'Active':''}}</td>
+                <td class="btn {{$employee->is_active == 1?'btn-success':'btn-danger'}} btn-xs py-1 my-2 mx-2">{{$employee->is_active == 1? 'Active':'Inactive'}}</td>
                 <td>
                     <a href="{{route('employees.show', $employee->id)}}"><button class="btn btn-info btn-sm">Show</button></a>
                     <a href="{{route('employees.edit', $employee->id)}}"><button class="btn btn-warning btn-sm">Edit</button></a>
