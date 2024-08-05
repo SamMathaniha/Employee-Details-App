@@ -20,6 +20,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Joining Date</th>
+                <th>Salary</th>
                 <th>Status</th>
                 <th>Action</th>
             </tr>
@@ -33,6 +34,7 @@
                 <td>{{$employee->name}}</td>
                 <td>{{$employee->email}}</td>
                 <td>{{$employee->joining_date}}</td>
+                <td>{{$employee->salary}}</td>
                 <td class="btn {{$employee->is_active == 1?'btn-success':'btn-danger'}} btn-xs py-1 my-2 mx-2">{{$employee->is_active == 1? 'Active':'Inactive'}}</td>
                 <td>
                     <a href="{{route('employees.show', $employee->id)}}"><button class="btn btn-info btn-sm">Show</button></a>

@@ -5,15 +5,19 @@
     <form action="update.php" method="POST">
         <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name" name="name" value="John Doe">
+            <input type="text" class="form-control" id="name" name="name" value="{{$employee->name}}">
         </div>
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email" value="john.doe@example.com">
+            <input type="email" class="form-control" id="email" name="email" value="{{$employee->email}}">
         </div>
         <div class="form-group">
             <label for="joining_date">Joining Date:</label>
-            <input type="date" class="form-control" id="joining_date" name="joining_date" value="2023-07-26">
+            <input type="date" class="form-control" id="joining_date" name="joining_date" value="{{$employee->joining_date}}">
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary:</label>
+            <input type="text" class="form-control" id="salary" name="salary" value="{{$employee->salary}}">
         </div>
         <div class="form-group">
             <label for="status">Status:</label>
