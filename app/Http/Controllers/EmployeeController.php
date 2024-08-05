@@ -80,7 +80,8 @@ class EmployeeController extends Controller
      */
     public function edit(string $id)
     {
-        return view ('edit');
+        $employee = Employee::find($id);
+        return view ('edit',compact('employee'));
     }
 
     /**
