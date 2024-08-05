@@ -2,7 +2,7 @@
 @section('content')
 <div class="container mt-5">
     <h2>Edit Employee</h2>
-    <form action="update.php" method="POST">
+    <form action="{{route('employees.update',$employee->id)}}" method="POST">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{$employee->name}}">
