@@ -44,6 +44,7 @@
             <!-- Additional rows can be added here -->
         </tbody>
     </table>
+    {{$Employees->links()}}
 </div>
 
 @endsection
