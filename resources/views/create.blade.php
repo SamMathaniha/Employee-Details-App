@@ -53,7 +53,7 @@
 
         <!-- Is Active Field -->
         <div class="form-check mb-3">
-        <input type="checkbox" class="form-check-input" id="active" name="is_active" value="{{old('is_active')}}">
+        <input type="checkbox" class="form-check-input" id="active" name="is_active" value='1'  {{old('is_active')=='1'?'checked':''}}>
         <label class="form-check-label" for="active">Active</label>
             @error('is_active')
                 <span class="invalid-feedback" role="alert">

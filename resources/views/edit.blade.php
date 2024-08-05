@@ -20,13 +20,11 @@
             <input type="text" class="form-control" id="salary" name="salary" value="{{$employee->salary}}">
         </div>
         <div class="form-group">
-            <label for="status">Status:</label>
-            <select class="form-control" id="status" name="status">
-                <option value="Active" selected>Active</option>
-                <option value="Inactive">Inactive</option>
-            </select>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="active" name="is_active" value="1" {{$employee->is_active == '1' ? 'checked' : ''}}>
+                <label class="form-check-label" for="active">Active</label>
+            </div>
         </div>
-        <input type="hidden" name="id" value="1"> <!-- Assuming you're passing the employee ID -->
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
