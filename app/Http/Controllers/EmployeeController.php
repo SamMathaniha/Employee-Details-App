@@ -13,7 +13,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $Employees = Employee::all();
+        $Employees = Employee::orderBy('name','asc')->get();
         return view ('index', compact('Employees'));
     }
 
