@@ -4,13 +4,29 @@
     <h2>Show Employee</h2>
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">John Doe</h5>
-            <p class="card-text">Email: john.doe@example.com</p>
-            <p class="card-text">Joining Date: 2023-07-26</p>
-            <p class="card-text">Status: Active</p>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{$employees->name}}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{$employees->email}}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="joining_date">Joining Date:</label>
+            <input type="date" class="form-control" id="joining_date" name="joining_date" value="{{$employees->joining_date}}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary:</label>
+            <input type="text" class="form-control" id="salary" name="salary" value="{{$employees->salary}}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="active">Active:</label>
+            <input type="text" class="form-control" id="is_active" name="is_active" value="{{ $employees->is_active ? 'Active' : 'Inactive' }}" readonly>
+        </div>
         </div>
     </div>
-    <button class="btn btn-secondary mt-3" onclick="window.location.href='index.php'">Back</button>
+    <a href="{{route('employees.index')}}"><button class="btn btn-secondary mt-3">Back</button></a>
 </div>
 
 @endsection

@@ -39,8 +39,8 @@ class EmployeeController extends Controller
             'is_active' => 'sometimes|boolean',
         ]);
 
- // Convert 'is_active' field to a boolean value (1 or 0)
- $data['is_active'] = $request->has('is_active') ? 1 : 0;
+        // Convert 'is_active' field to a boolean value (1 or 0)
+        $data['is_active'] = $request->has('is_active') ? 1 : 0;
 
         //mass assignment
        $data = $request->except('_token');
@@ -71,9 +71,9 @@ class EmployeeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Employee $employees)
     {
-        return view ('show');
+        return view ('show', compact('employees') );
     }
 
     /**
