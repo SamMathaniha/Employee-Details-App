@@ -39,12 +39,13 @@ class EmployeeController extends Controller
             'is_active' => 'sometimes|boolean',
         ]);
 
+ // Convert 'is_active' field to a boolean value (1 or 0)
+ $data['is_active'] = $request->has('is_active') ? 1 : 0;
 
         //mass assignment
        $data = $request->except('_token');
 
-       // Convert 'is_active' field to a boolean value (1 or 0)
-       $data['is_active'] = $request->has('is_active') ? 1 : 0;
+      
 
     // Create a new Employee record with the processed data
         Employee::create($data);
@@ -89,12 +90,22 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, Employee $employees)
     {
+        // Validate the incoming request data
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|unique:employees,email,'.$employees->id.'|email|max:255',
+            'joining_date' => 'required|date',
+            'salary' => 'required|numeric',
+            'is_active' => 'sometimes|boolean',
+        ]);
+    
         $data = $request->all();
-        //$employee = Employee::find($id);
         $employees->update($data);
-        return redirect()->route('employees.edit', $employees->id)->withSuccess('Employee Details Updated Successfully!');
-
+    
+        // Redirect with success message
+        return redirect()->route('employees.edit', $employees->id)->with('success', 'Employee Details Updated Successfully!');
     }
+    
 
     /**
      * Remove the specified resource from storage.
