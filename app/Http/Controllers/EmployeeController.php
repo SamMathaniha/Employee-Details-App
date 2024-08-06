@@ -110,8 +110,11 @@ class EmployeeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    //(Employee $employees) --> (Model $variable)
+    public function destroy(Employee $employees)
     {
-        //
+        $employees->delete();
+        return redirect()->route('employees.index')
+        ->withSuccess('success', 'Employee Details Deleted Successfully!');
     }
 }
