@@ -37,9 +37,17 @@
                 <td>{{$employee->salary}}</td>
                 <td class="btn {{$employee->is_active == 1?'btn-success':'btn-danger'}} btn-xs py-1 my-2 mx-2">{{$employee->is_active == 1? 'Active':'Inactive'}}</td>
                 <td>
-                    <a href="{{route('employees.show', $employee->id)}}"><button class="btn btn-info btn-sm">Show</button></a>
-                    <a href="{{route('employees.edit', $employee->id)}}"><button class="btn btn-warning btn-sm">Edit</button></a>
-                    <a ><button class="btn btn-danger btn-sm">Delete</button></a>
+                    <div class="d-flex">
+                       <a href="{{route('employees.show', $employee->id)}}"><button class="btn btn-info btn-sm mx-1">Show</button></a>
+                       <a href="{{route('employees.edit', $employee->id)}}"><button class="btn btn-warning btn-sm mx-1">Edit</button></a>
+                       <form Action="{{route('employees.destroy',$employee->id)}}" method="POST">
+                           @method('DELETE')
+                           @csrf
+                         <a ><button class="btn btn-danger btn-sm">Delete</button></a>
+                     </form>
+                    </div>
+                    
+                    
                 </td>
             </tr>
             @endforeach
