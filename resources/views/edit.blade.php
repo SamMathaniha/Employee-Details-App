@@ -6,6 +6,7 @@
     </div>
 @endif
 
+<a class="text-danger" href="{{ route('employees.index') }}">Back to List</a>
 
 <div class="container mt-5">
     <h2>Edit Employee</h2>

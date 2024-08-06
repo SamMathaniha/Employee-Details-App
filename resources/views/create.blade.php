@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-
+<a class="text-danger" href="{{ route('employees.index') }}">Back to List</a>
 <div class="container mt-5">
     <h2>Create New Employee</h2>
     <form action="{{ route('employees.store') }}" method="POST" novalidate>
