@@ -92,6 +92,8 @@ class EmployeeController extends Controller
         $data = $request->all();
         //$employee = Employee::find($id);
         $employees->update($data);
+        return redirect()->route('employees.edit', $employees->id)->withSuccess('Employee Details Updated Successfully!');
+
     }
 
     /**

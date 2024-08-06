@@ -1,5 +1,11 @@
 @extends('layouts.app')
 @section('content')
+@if(session()->has('message'))
+<div class="alert alert-success">
+    {{session()->get('message')}}
+</div>
+@endif
+
 <div class="container mt-5">
     <h2>Edit Employee</h2>
     <form action="{{route('employees.update',$employee->id)}}" method="POST">
